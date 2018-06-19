@@ -1,3 +1,18 @@
+# Make Docker Image Support delete-untagged manifests
+
+```bash
+$ cd ${projectRoot}
+$ docker build -t localhost:5000/registry:sfwn . -f Dockerfile
+```
+
+We use Multi-Stage Docker Build in Dockerfile, make registry binary first, and then make smallest image based on alpine.
+
+Please see patch (which will be released on registry:2.7, not yet):
+
+https://github.com/docker/distribution/pull/2302
+
+
+
 # Distribution
 
 The Docker toolset to pack, ship, store, and deliver content.
